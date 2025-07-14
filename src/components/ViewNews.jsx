@@ -18,7 +18,7 @@ const ViewShop = () => {
     useEffect(() => { fetchData() }, [])
     return (
         <div>
-            <NavBar/>
+            <NavBar />
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -29,16 +29,16 @@ const ViewShop = () => {
                                     (data, index) => {
                                         return (
 
-                                            <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                                                <div class="card" >
-                                                    <img src={data.thumbnail} class="card-img-top" alt="..."></img>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        {data.urlToImage}
+                                                    </div>
                                                     <div class="card-body">
-                                                        <h5 class="card-title">{data.title}</h5>
+                                                        <h5 class="card-title">Special title treatment</h5>
                                                         <p class="card-text">{data.description}</p>
-                                                        <br />
-                                                        <p class="card-text">{data.url}</p>
-                                                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                                                        <a href="#" class="btn btn-primary">{data.url}</a>
                                                     </div>
                                                 </div>
                                             </div>
